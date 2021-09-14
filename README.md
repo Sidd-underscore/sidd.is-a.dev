@@ -1,7 +1,7 @@
-> # THIS WEBSITE HAS BEEN ARCHIVED. You can see my new one at [camdan.me](https://camdan.me)
+> # HI. This is live at [cool-sid.is-a.dev](https://cool-sid.is-a.dev)
 
-## [camthehelpdesk.github.io](https://camdan.me)
-My personal website.
+
+Welcome to my personal website.
 
 ### Contributing
 **I AM NOT ACCEPTING CONTRIBUTIONS TO MY WEBSITE.** After all, it's my profile. It doesn't represent *me* if other people have written the code. However, feel free to check out my code!
@@ -12,7 +12,9 @@ This website was partially made using Bootstrap. FYI.
 ### Run your own instance
 Want to run this locally?
 
-`git clone https://github.com/CamTheHelpDesk/camthehelpdesk.github.io.git`
+```txt
+git clone https://github.com/uh-Sid/camthehelpdesk.github.io.git
+```
 
 Then, just open `index.html` in your facorite browser to run it.
 
