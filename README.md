@@ -13,7 +13,7 @@ This website was partially made using Bootstrap. FYI.
 Want to run this locally?
 
 ```txt
-git clone https://github.com/uh-Sid/camthehelpdesk.github.io.git
+git clone https://github.com/uh-Sid/cool-sid.is-a.dev.git
 ```
 
 Then, just open `index.html` in your facorite browser to run it.
