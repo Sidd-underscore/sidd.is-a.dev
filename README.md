@@ -1,4 +1,4 @@
-> # HI. This is live at [cool-sid.is-a.dev](https://cool-sid.is-a.dev)
+> # HI. This is live at [sidd.is-a.dev](https://sidd.is-a.dev)
 
 
 Welcome to my personal website.
