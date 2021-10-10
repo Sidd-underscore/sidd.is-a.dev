@@ -30,18 +30,21 @@ font-family: Major Mono Display;
 
 body {
     background: linear-gradient(#ed4134, #4488ef, #32ab54) !important;
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
 
 }
+
 
 p, h4 {
   font-family: "Cousine" !important;
+  font-weight: normal;
 }
 #hero {
     background: linear-gradient(#ed4134, #4488ef, #32ab54) !important;
-
   color: white !important;
+ 
 }
+
 
 #scrollblocker {
 	height: 200000px;
@@ -143,7 +146,7 @@ html.freeze {
 
 .project-section img {
 	width: 100%;
-	margin-top: -.1px
+
 }
 
 #project-inner-content.assorted .project-section {
@@ -309,7 +312,15 @@ font-family: 'Major Mono Display', monospace;
 	display: block;
 	position: absolute;
 	bottom: 45px;
-	left: 60px
+	left: 60px;
+}
+#fullpage .project-details {
+text-shadow:0 0 8px rgba(255, 255, 255, 0.445)
+
+}
+#fullpage .project-details .caption {
+  text-shadow: 1px 1px 1px #ffffff;
+
 }
 
 .project-inner .project-details {
@@ -328,7 +339,7 @@ font-family: 'Major Mono Display', monospace;
 	padding-bottom: 5px;
 	font-size: 4.5vw;
 	width: 60%;
-	color: #fff;
+    color: rgb(104, 102, 102);
 	line-height: 45px;
 	line-height: 4.7vw
 }
@@ -343,7 +354,6 @@ font-family: 'Major Mono Display', monospace;
 	-ms-flex: 10;
 	flex: 10;
 	margin: 0;
-	color: #545454
 }
 
 .project-inner .project-details h4,
@@ -353,7 +363,7 @@ font-family: 'Major Mono Display', monospace;
 	margin-top: 10px;
 	line-height: 20px;
 	margin-left: 0;
-	color: #a5a7a7;
+	color: #777777 !important;
 font-family: 'Major Mono Display', monospace;
 }
 
@@ -443,7 +453,6 @@ body.loading .modal {
 #fullpage .projects-load .container .project-details {
 	opacity: 1;
 	overflow: hidden;
-	text-shadow: 0 0 8px rgba(0, 0, 0, .08)
 }
 
 .view-case-study.projects-load {
@@ -514,15 +523,7 @@ font-family: 'Major Mono Display', monospace;
 	box-sizing: border-box
 }
 
-*::-moz-selection {
-	background: rgba(120, 212, 210, 0.521);
-	color: #37ccc9
-}
 
-*::selection {
-	background: rgba(120, 212, 210, 0.521);
-	color: #4ec4c2
-}
 
 ::-webkit-scrollbar {
 	display: none
@@ -613,8 +614,7 @@ font-family: 'Major Mono Display', monospace;
 }
 
 #fullpage .project-details h4 {
-	color: #fff;
-	color: rgba(255, 255, 255, .75)
+	color: rgba(168, 164, 164, 0.705);
 }
 
 button {
@@ -2551,7 +2551,7 @@ a.scroll.scroll-pop.scrollplease:before {
 	}
 	.project-details h1 {
 		font-size: 6vw;
-		line-height: 6vw
+		line-height: 6vw;
 	}
 	#fullpage section {
 		background-size: cover!important;
