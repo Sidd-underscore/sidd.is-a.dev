@@ -10,6 +10,10 @@
 font-family: Major Mono Display;
   src: url(https://fonts.gstatic.com/s/majormonodisplay/v7/RWmVoLyb5fEqtsfBX9PDZIGr2tFubRh7DXeR.woff2) format('woff2');
 }
+@font-face{
+  font-family: Cousine;
+ src: url('../fonts/Cousine-Regular.ttf') format('woff2');
+} 
 
 [class^=entypo-],
 [class*=" entypo-"] {
@@ -28,6 +32,10 @@ body {
     background: linear-gradient(#ed4134, #4488ef, #32ab54) !important;
     color: white !important;
 
+}
+
+p, h4 {
+  font-family: "Cousine" !important;
 }
 #hero {
     background: linear-gradient(#ed4134, #4488ef, #32ab54) !important;
