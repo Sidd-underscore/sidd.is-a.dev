@@ -19,10 +19,12 @@
 	<meta name="twitter:image" content="https://sidd.is-a.dev/assets/img/sid_icon.png">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="og:site_name" content="The Portfolio of Sidd_">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 	</script>
-	<script type="text/javascript" src="https://www.alexcoven.com/assets/js/jquery.fullpage.js">
+	<script type="text/javascript" src="/assets/js/jquery.fullpage.js">
 	</script>
 	<script src="https://use.typekit.net/dia6csr.js"></script>
 
@@ -35,8 +37,8 @@
 	<link rel="icon" href="/assets/img/sid_icon.png">
 	<link rel="manifest" href="manifest.json">
 	<script>
-		var siteUrl = 'https://sidd.is-a.dev';
-  var a_anchors = new Array();  a_anchors.push('ckf-painting');  a_anchors.push('sidepocket');  a_anchors.push('livewild');  a_anchors.push('reph');  a_anchors.push('logos');  a_anchors.push('assorted');  var projectUrl = "";
+		var siteUrl = 'https://' + window.location.hostname +'/';
+  var a_anchors = new Array();  a_anchors.push('utilities');  a_anchors.push('aspect');  a_anchors.push('livewild');  a_anchors.push('reph');  a_anchors.push('logos');  a_anchors.push('assorted');  var projectUrl = "";
    var project_title;
    var fullPageInit = false;
    var workPage = false;
@@ -47,7 +49,6 @@ function initFullPage(){
   $(".pagination").addClass("visible");
   $(".logo-menu svg").toggleClass("hovered");
   setTimeout(function(){ 
-    $('.view-case-study').addClass("clickme");
   }, 2500);
             
   $('#fullpage').fullpage({
@@ -221,7 +222,7 @@ I work to create innovative solutions that inspire, and foster memorable relatio
 </div>
 </div>
 <div id="fullpage">
-<section id="section-01" data-title="Sidd Utilties"  data-anchor="sidd-utilities" class="section page01" style="background-image: url(assets/img/utilities-hero.png)">
+<section id="section-01" data-title="utilties.xyz" data-url="utilities.xyz" data-anchor="utilities" class="section page01" style="background-image: url(assets/img/utilities-hero.png)">
 <div class="container">
 <div class="ui-info">
 <div class="full-line"></div>
@@ -232,11 +233,11 @@ I work to create innovative solutions that inspire, and foster memorable relatio
 </div>
 <div class="project-details">
 <h4 class="caption" >HTML, CSS, JavaScript</h4>
-<h1>UTILITIES.WTF <br> a website with all your tech needs</h1>
+<h1>UTILITIES.xyz | a website with all your tech needs</h1>
 </div>
 </div>
 </section>
-<section id="section-02" data-title="SidePocket Mobile App" data-url="sidepocket" data-anchor="sidepocket" class="section page02" style="background-image: url(/assets/img/aspect-hero.png)">
+<section id="section-02" data-title="Aspect" data-url="aspect" data-anchor="aspect" class="section page02" style="background-image: url(/assets/img/aspect-hero.png)">
 <div class="container">
 <div class="ui-info">
 <div class="full-line"></div>
@@ -247,7 +248,8 @@ I work to create innovative solutions that inspire, and foster memorable relatio
 </div>
 <div class="project-details">
 <h4 class="caption" >JavaScript, discord.js, JSON</h4>
-<h1>ASPECT <br> a discord bot packed with memes, games and much more</h1>
+<h1>ASPECT | a discord bot packed with memes, games and much more</h1>
+<div class="clickme"><a href="https://sidd.is-a.dev/aspect"> </a></div>
 </div>
 </div>
 </section>
@@ -313,6 +315,6 @@ I work to create innovative solutions that inspire, and foster memorable relatio
 </section>
 </div>
 <div class="preloaded-images" style="display:none;"> <img src="/assets/img/utilities-hero.png"> <img src="/assets/img/aspect-hero.png"> <img src="https://www.alexcoven.com/assets/img/assorted-ui-interface-12.jpg"> <img src="https://www.alexcoven.com/assets/img/rephscreen.png"> <img src="https://www.alexcoven.com/assets/img/ckf-featured.jpg"></div> </main> <script src="/assets/js/scripts.js"></script>
-<script src="https://www.alexcoven.com/assets/js/lazysizes.min.js" async=""></script>
+<script src="/assets/js/lazysizes.min.js" async=""></script>
 
 </bodyclass="homepage></body></html>

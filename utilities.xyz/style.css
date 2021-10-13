@@ -29,12 +29,12 @@ to this section's matching END comment to see page-specific styles.
 /* Import fonts */
 @font-face {
   font-family: HK Grotesk;
-  src: url("../assets/fonts/HKGrotesk-Medium.otf")
+  src: url("https://sidd.is-a.dev/assets/fonts/HKGrotesk-Medium.otf")
 }
 
 @font-face {
   font-family: digital-7;
-  src: url("../assets/fonts/digital-7.ttf");
+  src: url("https://sidd.is-a.dev/assets/fonts/digital-7.ttf");
 }
 
 .tablecenter {
@@ -74,7 +74,7 @@ END Glitch hello-app default styles
 
 body {
   font-family: HK Grotesk;
-  background-color: var(--color-bg);
+  background-color: #69F7BE;
 }
 
 input[type="button"] {
@@ -92,7 +92,25 @@ input[type="button"] {
   margin-left: auto;
 }
 
-
+   #link{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height: 40px;
+  width: 40px;
+  z-index: 10;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-image: url('img/logo.svg');
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+#link:hover{
+    opacity: 0.8;
+    box-shadow: 0 0 6px rgba(225,235,255,0.8);
+}
 input[type="text"] {
   background-color: white;
   font-size: 40px;

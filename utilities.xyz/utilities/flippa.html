@@ -11,27 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#e0c3fc"/>
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    <link rel="manifest" href="manifest.json">
-    <style>#link{
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  height: 40px;
-  width: 40px;
-  z-index: 10;
-  border-radius: 50%;
-  box-sizing: border-box;
-  background-image: url('https://cdn.glitch.com/2d5733c7-4b94-4b7c-a86c-7a3d5736cd5a%2Fhandyman_black_24dp.svg?v=1620695412164');
-  background-position: center center;
-  background-size: cover;
-  opacity: 0.5;
-  transition: all 0.25s;
-}
-#link:hover{
-    opacity: 0.8;
-    box-shadow: 0 0 6px rgba(225,235,255,0.8);
-}</style>
+    <link rel="stylesheet" href="../style.css">
+  
   </head>
   <body>
     <div class="loading"> </div>
@@ -39,14 +20,15 @@
     <main role="main" class="main" style="display: none; align-items: center;" aria-label="Click anywhere or hit the space bar to flip coin">
       <div class="coin-container" role="group">
         <div class="flipper" aria-hidden="true">
-          <div class="coin coin-front"  aria-hidden="true"><img src="https://cdn.glitch.com/c58d4929-7d99-421c-bbc3-279e6cb1a071%2Fheads-coin.png?1530118802237" alt="heads" style="align-items: center;"></div> 
+          <div class="coin coin-front"  aria-hidden="true"><img src="../img/heads.png" alt="heads" style="align-items: center;"></div> 
           <div class="coin coin-back"  aria-hidden="true"><img src="https://cdn.glitch.com/c58d4929-7d99-421c-bbc3-279e6cb1a071%2Ftails-coin.png?1530118802165" alt="tails" style="align-items: center;"></div> 
         </div> 
       </div>
       <div class="instructions">Click anywhere or hit the space bar to flip the coin</div>
+<a id="link" href="https://sidd.is-a.dev/utilities.wtf/"></a>
     </main>
     <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js"></script>
+    <script src="../client.js"></script>
 
     <script type="text/javascript">
       if('serviceWorker' in navigator) {
@@ -59,14 +41,12 @@
                  });
       }
     </script>
-    <link href="style.css" rel="stylesheet">
 <script>this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1.1').then(function(cache) {
       return cache.addAll([
-        '/',
-        '/style.css',
-        '/client.js',
+        '../style.css',
+        '../client.js',
       ]);
     })
   );

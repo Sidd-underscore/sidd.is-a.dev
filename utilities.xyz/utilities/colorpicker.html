@@ -1,0 +1,145 @@
+<style>@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+body{
+  background: radial-gradient(#69F7BE, #69F7EC);
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+#link{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height: 40px;
+  width: 40px;
+  z-index: 10;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-image: url('https://cdn.glitch.com/2d5733c7-4b94-4b7c-a86c-7a3d5736cd5a%2Fhandyman_black_24dp.svg?v=1620695412164');
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+#link:hover{
+    opacity: 0.8;
+    box-shadow: 0 0 6px rgba(225,235,255,0.8);
+}
+#clock{
+  border-radius: 50%;
+  height: 450px;
+ left: calc(50% - 225px);
+  position: relative;
+  top: calc(50% - 225px);
+  width: 450px;
+}
+#tick-marks{
+  height: 100%;
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 100%;
+  display: none;
+  
+}
+.tick-mark{
+  border: 1px solid #335;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 8px;
+  list-style: none;
+  position: absolute;
+  transition: all 300ms;
+  width: 8px;
+}
+.tick-mark:nth-of-type(5n + 1){
+  height: 14px;
+  width: 14px;
+}
+.ticker{
+  background: rgba(155, 175, 235, 0.7);
+  border: 1px solid #335;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  transform-origin: center center;
+}
+.ticker:after{
+  border: 1px solid #335;
+  bottom: calc(50% + 8px);
+  content: "";
+  display: block;
+  height: 11px;
+  left: calc(50% - 6px);
+  position: relative;
+  transform: rotate(45deg);
+  width: 11px;
+}
+.ticker:before{
+  background: #abf;
+  border: 1px solid #335;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 50%;
+  left: calc(50% - 2px);
+  position: relative;
+  width: 3px;
+}
+.second.ticker{
+  box-shadow: inset 0 0 0.6em 0.1em #ccf;
+  height: 400px;
+  left: calc(50% - 200px);
+  top: calc(50% - 200px);
+  width: 400px;
+  transition: all 200ms cubic-bezier(1, -0.1, 0.35, 1.335);
+}
+.second.ticker:after{
+  background: white;
+}
+.minute.ticker{
+  box-shadow: inset 0 0 0.7em 0.2em #ccf;
+  height: 340px;
+  left: calc(50% - 170px);
+  top: calc(50% - 170px);
+  width: 340px;
+  transition: all 600ms cubic-bezier(1, -0.1, 0.35, 1.335);
+}
+.minute.ticker:after{
+  background: #9fc;
+}
+.hour.ticker{
+  box-shadow: inset 0 0 0.8em 0.3em #ccf;
+  height: 280px;
+  left: calc(50% - 140px);
+  top: calc(50% - 140px);
+  width: 280px;
+  transition: all 1000ms cubic-bezier(1, -0.1, 0.35, 1.335);
+}
+.hour.ticker:after{
+  background: #c9f;
+}
+#time-output{
+  background-image: lightgray 50%;
+  color: #fff;
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 3em;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: calc(50% - 0.5em);
+  width: 380px;
+}</style>
+
+<a id="link" href="https://stuff-that-is-coolio.glitch.me"></a>
+<div id="clock">
+  <ul id="tick-marks"></ul>
+  <div class="second ticker"></div>
+  <div class="minute ticker"></div>
+  <div class="hour ticker"></div>
+  <div id="time-output"></div>
+</div>
+
+<a id="link" href="https://sidd.is-a.dev/utilities.wtf/"></a>
