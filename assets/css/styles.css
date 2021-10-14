@@ -29,18 +29,34 @@ font-family: Major Mono Display;
 }
 
 body {
-    background: linear-gradient(#ed4134, #4488ef, #32ab54) !important;
+    background-image: url('../img/hero.png');
+
     color: rgb(255, 255, 255) !important;
 
 }
 
+a:not(.scrollplease) {
+  color: inherit !important;
+  text-decoration: underline !important;
+  padding: 1.5px;
+
+}
+
+a:hover:not(.scrollplease) {
+  color: inherit !important;
+  text-decoration: none;
+  background-color: #37ccc9;
+  padding: 1.5px;
+  border-radius: 3.5px;
+}
 
 p, h4 {
   font-family: "Cousine" !important;
   font-weight: normal;
 }
 #hero {
-    background: linear-gradient(#ed4134, #4488ef, #32ab54) !important;
+    background-image: url('../img/hero.png');
+    background-repeat: repeat-y !important;
   color: white !important;
  
 }
@@ -80,6 +96,8 @@ html.freeze {
 	left: 0;
 	z-index: 999999
 }
+
+
 
 #scroll-control-inner {
 	height: 2000px;
@@ -1213,13 +1231,7 @@ body.homepage {}
 	cursor: pointer
 }
 
-.menu-shelf ul.tabs li:hover>a {
-	color: #37ccc9
-}
 
-.menu-shelf ul.tabs li.current>a {
-	color: #37ccc9
-}
 
 .menu-shelf ul.tabs li>a:hover {
 	cursor: pointer
