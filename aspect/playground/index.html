@@ -21,25 +21,28 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 
 	</script>
-	<link rel="stylesheet" href="css/discord.css" />
 
+	<script src="script.js">
+	</script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/discord.css" />
+
 	<link href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet" media="all" onload='this.media="all"'
 	/>
-	<link rel="icon" href="img/aspect-logo.png">
+	<link rel="icon" href="../img/aspect-logo.png">
 
 	</script>
 </head>
 
-<body>
+<body onload="defineThing()">
 	<div>
 		<div>
 			<div class="wrapper">
 				<div class="navbar" data-v-7aced1d4="">
 					<div class="container" data-v-6130c220="" data-v-7aced1d4=""><a href="/" aria-current="page" aria-label="Home" class="nuxt-link-exact-active nuxt-link-active navbar-link active"
 						 data-v-db920a26="" data-v-235d3f2d="" data-v-7aced1d4="" data-v-6130c220="">
-							<img class="logo" src="img/aspect-logo.png"></a>
+							<img class="logo" src="../img/aspect-logo.png"></a>
 						<div class="mobile-hidden" data-v-6130c220="" data-v-7aced1d4=""><a href="/" rel="" class="navbar-link active" data-v-db920a26="" data-v-235d3f2d="" data-v-7aced1d4="" data-v-6130c220="">
 								Home
 							</a> <a href="https://discord.gg/Fkjgn8WsyH" rel="" target="_blank" class="navbar-link" data-v-db920a26="" data-v-235d3f2d="" data-v-7aced1d4=""
@@ -53,24 +56,29 @@
 					</div>
 				</div>
 				<div class="site-container" data-v-83b550b6="">
-					<div class="container message" data-v-300498a6="" data-v-83b550b6="">
-						<div class="container-inner" data-v-300498a6="">
-							<!---->
-							<p class="eyebrow eyebrow" data-v-7c73fa18="" data-v-300498a6="">
-Discord just got funner...							</p>
-							<h1 class="headline-main title" data-v-841db4a4="" data-v-300498a6="">
-Memes, games and imgen							</h1>
-							<div class="message-container" data-v-300498a6="">
-								<p class="message-line" data-v-300498a6="">
-									<b>IMGEN</b> | Generate cool images based on memes <a href="playground/?thing=imgen"> <span class="tryit"> Try it <i class="fas fa-long-arrow-alt-right"></i></span></a>
-								</p>
-								
-							</div>
-							
-							<div class="button-container" data-v-300498a6=""><a href="https://discord.com/oauth2/authorize?client_id=846487386095222834&redirect_uri=https%3A%2F%2Fsiddis-adev.sdmdevelopment.repl.co%2Faspect%2Fcallback%2Finvite.html&response_type=code&scope=bot%20applications.commands" rel="" target="_blank" class="button discord join-button" data-v-db920a26="" data-v-cb567758=""
-								 data-v-300498a6=""><img src="img/Discord-Logo-White.svg" alt="" data-v-db920a26="" data-v-300498a6=""> <span data-v-db920a26="" data-v-300498a6="">Invite the bot!</span></a> <a href="https://discord.gg/Fkjgn8WsyH" class="button grey" data-v-db920a26="" data-v-cb567758="" data-v-300498a6=""><span class="material-icons" data-v-300498a6="">
-live_help        
-</span> <span data-v-300498a6="">     Join the support server</span></a></div> </div></div> <!----> 
+          <div class="container message" data-v-300498a6="" data-v-83b550b6="">
+            <div id="imgen" style="opacity: 0;">
+          <h1 > Imgen Playground</h1>
+          <div class="input">          <label for="type-imgen">Choose a imgen type:</label>
+<select name="type-imgen" id="imgen-sel">
+      <option value="gun">gun</option> 
+      <option value="mask">mask</option>      
+      <option value="worship">worship</option>       
+      <option value="rifleshoot">rifleshoot</option>
+            <option value="robert">robert</option>
+                  <option value="saveonlyone">saveonlyone</option></select>
+
+                   <label for="url-imgen">Enter your image url:</label>
+<input name="url-imgen" id="url-imgen" required>
+<button type="submit" onclick="submitImgen()">Imgen it (this may take a moment)</button>
+
+</div>
+
+          <div id= "output" class="output">
+            <sub><i>Not seeing your image? If you chose <code>saveonlyone</code> [will do this in a billion years ig]</i></sub>
+          </div>
+          </div>
+          </div>	</div>  <!----> 
   
 
 </body></html>
