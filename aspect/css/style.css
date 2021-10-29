@@ -573,4 +573,11 @@ a:hover {
 
     #output img {
       max-height: 250px;
-    }
+      margin: 25px;
+box-shadow: rgba(106, 103, 103, 0.418) 0px 10px 36px 0px, rgba(71, 69, 69, 0.418) 0px 0px 0px 1px;    }
+
+    #hidden_div {
+    display: none;
+}
+
+
