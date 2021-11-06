@@ -1,7 +1,9 @@
 
 function defineThing() {
   if (window.location.search === "?thing=imgen") {
-    document.getElementById('imgen').style.opacity = "100";
+    document.getElementById('imgen').style.visibility = "visible";
+  } else   if (window.location.search === "?thing=meme") {
+    document.getElementById('meme').style.visibility = "visible";
   }
 };
 
