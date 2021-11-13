@@ -11,4 +11,3 @@ document.getElementById('caption').innerHTML = "alphabet is really cool"
     console.log("Alphabet Toggled");
   }
 };
-
