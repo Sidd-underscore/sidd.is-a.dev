@@ -1,106 +1,138 @@
-:root{
-  --player-border-color: darkgrey;
---player-link-color: rgb(129, 129, 129);
---player-progress-color: #000;
---player-text-color: grey;
---player-timeline-color: var(--player-border-color);
---player-bg: transparent;
+#myProgress {
+  width: 420px;
+   background-color: #d9d9f2; 
+  cursor: pointer;
+  border-radius: 10px;
+}
+#myAudio {
+  margin: 0px;
 }
 
-.player-wrapper {
-	align-items: center;
-	background-color: var(--player-bg);
-	background: linear-gradient(90deg, #fff 0, darken(#fff, 12%));
-	display: flex;
-  padding: auto;
-	justify-content: center;
+.gerladine #title path {
+  fill: rgb(46, 45, 45);
+}
+#myBar {
+  width: 0%;
+  height: 5px;
+  background-color: rgba(46, 45, 45, 0.897);
+  border-radius: 10px;
 }
 
-.player {
-	background-color: var(--player-bg);
-	border-radius: 5px;
-	border: 1px solid var(--player-border-color);
-	box-shadow: 0 5px 8px rgba(0,0,0,0.15);
-	color: var(--player-text-color);
-	display: inline-block;
-	line-height: 1.5625;
-	position: relative;
-  background: white;
+.logo {
+  fill: red;
 }
 
-.player-controls {
-	display: flex;
+.btn-action{
+  cursor: pointer;
+  padding-top: 10px;
+  width: 30px;
 }
 
-.player-controls div {
-		border-right: 1px solid var(--player-border-color);
- }	
-		.player-controls div:last-child {
-			border-right: none;
-		}
-		
-	.player-controls div	a {
-			color: var(--player-link-color);
-			display: block;
-			line-height: 0;
-			padding: 1em;
-			text-decoration: none;
-  }		
-			.player-controls div svg {
-				display: inline-block;
-				width: 1.125rem;
-			
-		
-	
+.btn-ctn, .infos-ctn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infos-ctn{
+padding-top: 20px;
 }
 
-.player-timeline {
-	background-color: var(--player-timeline-color);
-	height: 50%;
-	min-width: 200px;
-	position: relative;
+.btn-ctn > div {
+ padding: 25px;
+ margin-top: 18px;
+ margin-bottom: 18px;
 }
-.player-timeline	.player-progress,
-.player-timeline	.player-seeker {
-		bottom: 0;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-	}
-	
-.player-timeline	.player-progress {
-		background-color: var(--player-progress-color);
-		z-index: 1;
-	}
-	
-.player-timeline	.player-seeker {
-		cursor: pointer;
-		width: 100%;
-		z-index: 2;
-	}
 
-
-.player-time {
-	display: flex;
-	justify-content: space-between;
+.infos-ctn > div {
+ margin-bottom: 8px;
+ color: white;
 }
-.player-time	.player-time-current {
-		font-weight: 700;
-		padding-left: 5px;
-	}
 
-.player-time	.player-time-total {
-		opacity: 0.5;
-		padding-right: 5px;
-	}
+.first-btn{
+  margin-left: 3px;
+}
+
+.duration{
+  margin-left: 10px;
+}
+
+.title{
+  margin-left: 10px;
+  width: 210px;
+  text-align: center;
+}
+
+.player-ctn{
+  border-radius: 15px;
+  width: 420px;
+  padding: 10px;
+  background-color: rgba(80, 92, 220, var(--tw-border-opacity));
+  margin:auto;
+  margin-top: 100px;
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.507);
+
+}
+
+.playlist-track-ctn{
+  display: flex;
+  background-color: rgba(80, 92, 220, var(--tw-border-opacity));
+  border: 1px solid white;
+  margin-top: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.playlist-track-ctn:last-child{
+  /*border: 1px solid #ffc266; */
+}
+
+.playlist-track-ctn > div{
+  margin:10px;
+}
+
+.playlist-track-ctn {
+  margin: 10px;
+}
+.playlist-info-track{
+  width: 80%;
+}
+.playlist-info-track,.playlist-duration{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: white;
+  font-size: 14px;
+  pointer-events: none;
+}
+.playlist-ctn{
+   padding: 20px;
+}
+.player-ctn {
+    transform: perspective(1200px) rotateY(15deg);
+  transition: transform 1s ease 0s;
+}
+.player-ctn:hover {
+   transform: perspective(3000px) rotateY(5deg);
+}
+.active-track{
+  background: rgba(80, 92, 220, var(--tw-border-opacity));
+  color: lightgrey !important;
+  font-weight: bold;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  
+}
+
+.active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
+  color: lightgrey !important;
+}
 
 
-.player-volume {
-	display: inline-block;
-	height: 1.1rem;
-	margin: 0 0 0 2px;
-	width: 6rem;
+.playlist-btn-play{
+  pointer-events: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.fas{
+  color: white;
+  font-size: 20px;
 }
 
 .full {

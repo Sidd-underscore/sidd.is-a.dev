@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="dark js-focus-visible" data-js-focus-visible="">
    <head>
+     <script id="au-s"></script>
       <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js"></script>
       <link rel="icon" href="https://www.indiewire.com/wp-content/uploads/2020/12/podcasting-gear.jpeg">
@@ -8,6 +9,8 @@
       <meta name="application-name" content="Discord.js Docs">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+          <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
+
       <meta name="msapplication-TileColor" content="#090a16">
       <meta name="theme-color" content="#090a16">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,177 +89,66 @@
                         <code id="caption" class="text-gray-200 bg-discord-blurple-560 p-4 md:text-lg mx-auto rounded-md shadow flex items-center">
                            <span class="hover:text-white mr-2">Podcasts, from friends at school<br>Start by choosing one above</span>
                         </code>
-                        <div id="audio" class="player-wrapper">
-	<audio-player file="assets/test.mp3"></audio-player>
+                       
+<audio id="myAudio" ontimeupdate="onTimeUpdate()">
+  <!-- <source src="audio.ogg" type="audio/ogg"> -->
+  <source id="source-audio" src="" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<div style="display: none;" id="au" class="player-ctn">
+  <div class="infos-ctn">
+    <div class="timer">00:00</div>
+    <div class="title"></div>
+    <div class="duration">00:00</div>
+  </div>
+  <div id="myProgress">
+    <div id="myBar"></div>
+  </div>
+  <div class="btn-ctn">
+     <div class="btn-action first-btn" onclick="previous()">
+        <div id="btn-faws-back">
+          <i class='fas fa-step-backward'></i>
+        </div>
+     </div>
+     <div class="btn-action" onclick="rewind()">
+        <div id="btn-faws-rewind">
+          <i class='fas fa-backward'></i>
+        </div>
+     </div>
+     <div class="btn-action" onclick="toggleAudio()">
+        <div id="btn-faws-play-pause">
+          <i class='fas fa-play' id="icon-play"></i>
+          <i class='fas fa-pause' id="icon-pause" style="display: none"></i>
+        </div>
+     </div>
+     <div class="btn-play" onclick="forward()">
+        <div id="btn-faws-forward">
+          <i class='fas fa-forward'></i>
+        </div>
+     </div>
+     <div class="btn-action" onclick="next()">
+        <div id="btn-faws-next">
+          <i class='fas fa-step-forward'></i>
+        </div>
+     </div>
+     <div class="btn-mute" id="toggleMute" onclick="toggleMute()">
+        <div id="btn-faws-volume">
+          <i id="icon-vol-up" class='fas fa-volume-up'></i>
+          <i id="icon-vol-mute" class='fas fa-volume-mute' style="display: none"></i>
+        </div>
+     </div>
+  </div>
+  <div class="playlist-ctn"></div>
 </div>
+<div id="au-s"></div>
                      </div>
                   </div>
                 
 <footer class="bg-discord-blurple-560"><div class="max-w-3xl mx-auto text-center px-16 pt-10 pb-4 text-gray-200"><strong><a href="#/" class="router-link-active router-link-exact-active" aria-current="page">Sidd_ Podcast</a></strong><ul class="mb-4"><li>Alphabet by Siddharth M</li><li>Geraldine by Oliver P</li></ul><p class="text-xs break-words-legacy"> <br> <b>built: </b><code id="date"></code></p></div></footer>            </div>
      <script> let date = new Date()
      document.getElementById('date').innerHTML = date</script>
-     <script>const AudioPlayer = {
-	template: `
-		<div class="player">
-			<div class="player-controls">
-				<div id="stop">
-					<a v-on:click.prevent="stop" title="Stop" href="#">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-	 						<path fill="currentColor" d="M16,4.995v9.808C16,15.464,15.464,16,14.804,16H4.997C4.446,16,4,15.554,4,15.003V5.196C4,4.536,4.536,4,5.196,4h9.808C15.554,4,16,4.446,16,4.995z"/>
-						</svg>
-					</a>
-				</div>
-				<div id="play">
-					<a v-on:click.prevent="playing = !playing" :title="(playing) ? 'Pause' : 'Play'" href="#">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-							<path v-if="!playing" fill="currentColor" d="M15,10.001c0,0.299-0.305,0.514-0.305,0.514l-8.561,5.303C5.51,16.227,5,15.924,5,15.149V4.852c0-0.777,0.51-1.078,1.135-0.67l8.561,5.305C14.695,9.487,15,9.702,15,10.001z"/>
-							<path v-else fill="currentColor" d="M15,3h-2c-0.553,0-1,0.048-1,0.6v12.8c0,0.552,0.447,0.6,1,0.6h2c0.553,0,1-0.048,1-0.6V3.6C16,3.048,15.553,3,15,3z M7,3H5C4.447,3,4,3.048,4,3.6v12.8C4,16.952,4.447,17,5,17h2c0.553,0,1-0.048,1-0.6V3.6C8,3.048,7.553,3,7,3z"/>
-						</svg>
-					</a>
-				</div>
-				<div id="seek">
-					<div class="player-timeline">
-						<div :style="progressStyle" class="player-progress"></div>
-						<div v-on:click="seek" class="player-seeker" title="Seek"></div>
-					</div>
-					<div class="player-time">
-						<div class="player-time-current">{{ this.currentSeconds | convertTimeHHMMSS }}</div>
-						<div class="player-time-total">{{ this.durationSeconds | convertTimeHHMMSS }}</div>
-					</div>
-				</div>
-				<div id="download" v-show="!showVolume">
-					<a v-on:click.prevent="download" href="#" title="Download">
-						<span class="material-icons">
-file_download
-</span>
-					</a>
-				</div>
-				<div id="loop" v-show="!showVolume">
-					<a v-on:click.prevent="looping = !looping" href="#" title="Loop">
-						<span class="material-icons">
-loop
-</span>
-					</a>
-				</div>
-				<div id="mute">
-					<a v-on:click.prevent="mute" href="#" title="Mute">
-					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-					</a>
-				</div>
-				<div id="volume">
-					<a v-on:click.prevent="" v-on:mouseenter="showVolume = true" v-on:mouseleave="showVolume = false" :title="volumeTitle" href="#">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-							<path fill="currentColor" d="M19,13.805C19,14.462,18.462,15,17.805,15H1.533c-0.88,0-0.982-0.371-0.229-0.822l16.323-9.055C18.382,4.67,19,5.019,19,5.9V13.805z"/>
-						</svg>
-						<input v-model.lazy.number="volume"  draggable='false' ondragstart="return false;" v-show="showVolume" class="player-volume" type="range" min="0" max="100"/>
-					</a>
-				</div>
-			</div>
-			<audio :loop="looping" ref="audio" :src="file" v-on:timeupdate="update" v-on:loadeddata="load" v-on:pause="playing = false" v-on:play="playing = true" preload="auto" style="display: none;"></audio>
-		</div>
-  `,
-	props: {
-		autoPlay: {
-			type: Boolean,
-			default: false
-		},
-		file: {
-			type: String,
-			default: null
-		},
-		loop: {
-			type: Boolean,
-			default: false
-		}
-	},
-	data: () => ({
-		currentSeconds: 0,
-		durationSeconds: 0,
-		loaded: false,
-		looping: false,
-		playing: false,
-		previousVolume: 35,
-		showVolume: false,
-		volume: 100
-	}),
-	computed: {
-		muted() {
-			return this.volume / 100 === 0;
-		},
-		percentComplete() {
-			return parseInt(this.currentSeconds / this.durationSeconds * 100);
-		},
-		progressStyle() {
-			return { width: `${this.percentComplete}%` };
-		},
-		volumeTitle() {
-			return `Volume (${this.volume}%)`;
-		}
-	},
-	filters: {
-		convertTimeHHMMSS(val) {
-			let hhmmss = new Date(val * 1000).toISOString().substr(11, 8);
-
-			return hhmmss.indexOf("00:") === 0 ? hhmmss.substr(3) : hhmmss;
-		}
-	},
-	watch: {
-		playing(value) {
-			if (value) { return this.$refs.audio.play(); }
-			this.$refs.audio.pause();
-		},
-		volume(value) {
-			this.$refs.audio.volume = this.volume / 100;
-		}
-	},
-	methods: {
-		download() {
-			this.stop();
-			window.open(this.file, 'download');
-		},
-		load() {
-			if (this.$refs.audio.readyState >= 2) {
-				this.loaded = true;
-				this.durationSeconds = parseInt(this.$refs.audio.duration);
-
-				return this.playing = this.autoPlay;
-			}
-
-			throw new Error('Failed to load sound file.');
-		},
-		mute() {
-			if (this.muted) {
-				return this.volume = this.previousVolume;
-			}
-
-			this.previousVolume = this.volume;
-			this.volume = 0;
-		},
-		seek(e) {
-			if (!this.loaded) return;
-
-			const bounds = e.target.getBoundingClientRect();
-			const seekPos = (e.clientX - bounds.left) / bounds.width;
-
-			this.$refs.audio.currentTime = parseInt(this.$refs.audio.duration * seekPos);
-		},
-		stop() {
-			this.playing = false;
-			this.$refs.audio.currentTime = 0;
-		},
-		update(e) {
-			this.currentSeconds = parseInt(this.$refs.audio.currentTime);
-		}
-	},
-	created() {
-		this.looping = this.loop;
-	}
-};
-
-new Vue({
-	el: "#audio",
-	components: { AudioPlayer }
-});</script>
+    
          </div>
          <!---->
       </div>
