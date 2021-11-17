@@ -61,7 +61,9 @@ padding-top: 20px;
   width: 210px;
   text-align: center;
 }
-
+fas:hover {
+  cursor: pointer!important;
+}
 .player-ctn{
   border-radius: 15px;
   width: 420px;

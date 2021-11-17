@@ -31,8 +31,8 @@
   var listAudio = [
     {
       name:"Episode 1 - Alphabet Introduction",
-      file:"assets/test.mp3",
-      duration:"08:47"
+      file:"Siddharth's Podcast_ Alphabet ep. 1 _ Introduction.mp3",
+      duration:"03:07"
     },
     {
       name:"Coming Soon!",
