@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=McLaren&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://sidd.is-a.dev/assets/fonts/HKGrotesk-Medium.otf")
+}
+
 body {
 font-family: 'Pacifico', cursive;
   font-size: 1rem;
@@ -32,22 +38,60 @@ a:hover {
   font-size: 100px;
 }
 .main {
-  font-family:  "Pacifico", cursive;
+  font-family:  "HK Grotesk", sans-serif;
   font-size: 24px;
 }
 
-.title {
-  font-size: 28px;
-}
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.25s;
+  width: 335px;
+    text-align: center;
+  height: 282px;
+  border: 5px solid white;
+  margin: 10px;
+  border-radius: 30px;
+  background-color: rgba(236, 116, 35, 0.37);
+
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 }
 .card img {
-  height: 125px;
+  height: auto;
+  margin: 5px;
+  max-width: 25%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.733);
+  border-radius: 20px;
 }
+
+.cards {
+    margin: 47px !important;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+
+.card p {
+  text-align: center;
+}
+
+highlight {
+  background-color: white;
+  border-radius: 5px;
+  height: 10px;
+  font-size: 15px;
+  padding: 2px;
+  text-transform: uppercase;
+}
+
+
