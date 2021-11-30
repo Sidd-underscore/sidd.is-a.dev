@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rooms Text Chat</title>
+    <meta name="description" content="Rooms live chat | Coded by Sid_" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/wingcss" />
+    <link rel="stylesheet" href="public/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"
+    />
+    <link rel="stylesheet" href="public/vex-theme-wireframe.css" />
+    <link rel="stylesheet" href="public/vex.css" />
+
+    <link
+      href="https://unpkg.com/filepond@^4/dist/filepond.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.com/446b0bba-13ba-4ce7-b893-56c1e87df547%2Fspeech-balloon_1f4ac.png?1534593703066"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- import the webpage's client-side javascript file -->
+  </head>
+  <body>
+   
+
+        <main class="main">
+
+    <h1 style="text-align:center">
+      <a href="/" style="text-decoration:none; color:#373fff"
+        ><img
+          class="logo"
+          src="https://cdn.glitch.com/a685c911-5e22-4019-b3e8-bd3e0790290f%2FRooms%20banner%20without%20ad%20transparent.png?v=1631997176328"
+      /></a>
+    </h1>
+    <p style="text-align:center" class="tooltip" id="sharep">
+      <span style="color:#4975FB" id="share"></span> 👈 Share this code
+      <span class="tooltiptext">Click to copy</span>
+    </p>
+ 
+      
+      <div id="two"></div>
+
+      <div id="one">
+        <div class="choose-action">
+          <span class="action" id="write">Write It</span>
+          <span class="action" id="imglol" onclick="showImgstuff()">Insert a link, image or gif</span>
+        </div>
+        <div id="text" class="text">
+          <div class="format">
+            <button onclick="boldIt()" class="material-icons md-24">
+              format_bold</button
+            ><button onclick="italicIt()" class="material-icons md-24">
+              format_italic</button
+            ><button onclick="underIt()" class="material-icons md-24">
+              format_underlined</button
+            ><button onclick="underIt()" class="material-icons md-24">
+              format_bold</button
+            ><button onclick="newGif()" class="material-icons md-24">
+              format_bold</button
+            ><button
+              onclick=" window.open('https://cool-sid.is-a.dev/projects/rooms/things/help/formatting.html','_blank')"
+              class="material-icons hi md-24"
+            >
+              help
+            </button>
+          </div>
+
+          <textarea
+            placeholder="Type your message here ⌨️"
+            style="margin:0;max-height:100px"
+            oninput="change()"
+            id="input"
+            class="article"
+          ></textarea>
+        </div>
+
+          <div id="imgstuff" style="display: none;" class="imgstuff">
+            <button onclick="newGif()" class="material-icons md-36">
+              gif_box
+            </button>
+            <button onclick="newUrl()" class="material-icons md-36">
+              link
+            </button>
+            <button onclick="newImg()" class="material-icons md-36">
+              image
+            </button>
+          </div>
+      </div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+
+    <script src="public/simplecopy.min.js"></script>
+    <script src="public/client.js"></script>
+    <script src="public/chat-action-dialogs.js"></script>
+    <script src="public/vex.min.js"></script>
+        <script src="../node_modules/socket.io"></script>
+
+
+    <script>
+      vex.defaultOptions.className = "vex-theme-wireframe";
+    </script>
+  </body>
+</html>

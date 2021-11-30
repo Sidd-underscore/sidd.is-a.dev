@@ -1,1 +1,54 @@
-Coming soon!
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"></script>
+    <meta name="google-site-verification" content="SPMuqRN1thyPv7T-bQpuf5qOQROAMeUGIox9j4criYA" />
+    <title>Rooms Text Chat</title>
+    <meta name="description" content="Rooms live chat | Coded by Sid_">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/wingcss"/>
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.glitch.com/446b0bba-13ba-4ce7-b893-56c1e87df547%2Fspeech-balloon_1f4ac.png?1534593703066" />
+
+    <!-- import the webpage's client-side javascript file -->
+  </head>
+  <body>
+     <div class="off">
+      
+    <h2 id="offline"></h2>
+      </div>
+    <h1 style="text-align:center">
+      <a href="/" style="text-decoration:none; color:#373fff"><img class="logo" src="https://cdn.glitch.com/a685c911-5e22-4019-b3e8-bd3e0790290f%2FRooms%20banner%20without%20ad%20transparent.png?v=1631997176328"></a>
+    </h1>
+
+
+    <main style="text-align:center">
+      <button class="btn-hollow" onclick="join()">
+        Join a chat 👥
+      </button>
+      <button class="btn-hollow" onclick="newChat()">
+        Make a chat 🚀
+      </button>
+      
+    </main>
+    <br>
+    <div class="bg">
+      Room Text Chat generates 2 people chats, with live streaming 👤<br>What you type is streamed live to the other person<br><br>Additionally, markdown is also supported ⌨️<br><br>
+    </div>
+
+    <script src="public/vex.min.js"></script>
+    <script>vex.defaultOptions.className = 'vex-theme-wireframe'</script>
+    <link rel="stylesheet" href="public/vex.css" />
+    
+    <link rel="stylesheet" href="public/vex-theme-wireframe.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+    <script src="public/simplecopy.min.js"></script>
+    <script src="public/chat-client.js"></script>
+    <script src="public/chat-action-dialogs.js"></script>
+    <script src="public/client.js"></script>
+
+  </body>
+</html>
