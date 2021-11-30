@@ -43,11 +43,9 @@ a:hover {
 }
 
 .card {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   transition: 0.25s;
   width: 335px;
     text-align: center;
-  height: 282px;
   border: 5px solid white;
   margin: 10px;
   border-radius: 30px;
@@ -92,6 +90,7 @@ highlight {
   font-size: 15px;
   padding: 2px;
   text-transform: uppercase;
+  text-decoration: none !important;
 }
 
 
