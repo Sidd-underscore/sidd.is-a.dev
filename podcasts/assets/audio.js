@@ -32,14 +32,14 @@
 if (window.location.search==="?geraldine") {
    listAudio = [
     {
-      name:"Episode 1 - Chapters 1 - 3",
+      name:"Episode ep. 1 - Chapters 1 - 3",
       file:"geraldine/Geraldine%20episode%201.mp3",
       duration:"05:04"
     },
     {
-      name:"Coming Soon!",
-      file:"assets/test.mp3",
-      duration:"03:31"
+      name:"Geraldine ep. 2 - Chapters 4 - 6",
+      file:"geraldine/Geraldine ep 2 _ chap 4 - 6.mp3",
+      duration:"08:23"
     },
     {
       name:"Coming Soon!",
