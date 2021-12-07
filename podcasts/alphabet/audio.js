@@ -35,9 +35,9 @@
       duration:"03:07"
     },
     {
-      name:"Coming Soon!",
-      file:"assets/test.mp3",
-      duration:"03:31"
+      name:"Episode 2 - X",
+      file:"Alphabet ep. 2 - X.mp3",
+      duration:"03:01"
     },
     {
       name:"Coming Soon!",
