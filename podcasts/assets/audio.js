@@ -42,22 +42,22 @@ if (window.location.search==="?geraldine") {
       duration:"08:23"
     },
     {
-      name:"Coming Soon!",
-      file:"assets/test.mp3",
-      duration:"03:31"
+      name:"Episode 3 - Chapters 7 - 9",
+      file:"geraldine/Geraldine ep.3 .mp3",
+      duration:"09:31"
     }
   ]
 } else if (window.location.search === "?alphabet") {
   listAudio = [
      {
       name:"Episode 1 - Alphabet Introduction",
-      file:"./alphabet/Siddharth's Podcast_ Alphabet ep. 1 _ Introduction.mp3",
+      file:"alphabet/Siddharth's Podcast_ Alphabet ep. 1 _ Introduction.mp3",
       duration:"03:07"
     },
     {
-      name:"Coming Soon!",
-      file:"assets/test.mp3",
-      duration:"03:31"
+      name:"Episode 2 - X",
+      file:"alphabet/Alphabet ep. 2 - X.mp3",
+      duration:"03:01"
     },
     {
       name:"Coming Soon!",
