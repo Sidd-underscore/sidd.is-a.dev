@@ -17,6 +17,10 @@ a {
 
 }
 
+.choose {
+  font-size: 18px;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -69,13 +73,17 @@ a:hover {
   background: rgba(255, 255, 255, 0.733);
   border-radius: 20px;
 }
-
+.big {
+    height: 65px;
+    width: 142px;
+}
 .cards {
     margin: 47px !important;
-    width: 50%;
     display: flex;
     justify-content: space-between;
     align-content: space-around;
+  	margin-left: auto;
+	margin-right: auto;
 }
 
 
