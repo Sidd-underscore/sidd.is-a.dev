@@ -6,10 +6,19 @@
       padding: 0;
     }
     :root, body.is-fullscreen {
-      background-color: #000000;
+      background-color: #7a87cc;
+    }
+    .sc-canvas {
+      border-radius: 10px;
+      margin: 35px;
+      border: 2px solid white;
     }
     [hidden] {
       display: none !important;
+    }
+
+    body {
+      background-image: url('assets/back.png');
     }
     h1 {
       font-weight: normal;
