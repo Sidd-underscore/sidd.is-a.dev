@@ -9742,10 +9742,10 @@
       "currentCostume": 0,
       "costumes": [
         {
-          "assetId": "851273cf46f0c99e61d401a7868c7680",
+          "assetId": "og",
           "name": "1",
           "bitmapResolution": 1,
-          "md5ext": "851273cf46f0c99e61d401a7868c7680.svg",
+          "md5ext": "og.svg",
           "dataFormat": "svg",
           "rotationCenterX": 7,
           "rotationCenterY": 10.834384999999997
@@ -13556,13 +13556,13 @@
       "currentCostume": 0,
       "costumes": [
         {
-          "assetId": "b11aea03c0a138204e17c084e597fb2f",
+          "assetId": "back",
           "name": "e229a81f72a1cff",
           "bitmapResolution": 2,
-          "md5ext": "b11aea03c0a138204e17c084e597fb2f.png",
+          "md5ext": "back.png",
           "dataFormat": "png",
-          "rotationCenterX": 480,
-          "rotationCenterY": 358
+          "rotationCenterX": 540,
+          "rotationCenterY": 460
         }
       ],
       "sounds": [
@@ -14583,13 +14583,13 @@
           "rotationCenterY": 0
         },
         {
-          "assetId": "379873b9274949b5835e19c53431799f",
+          "assetId": "d36f6603ec293d2c2198d3ea05109fe0",
           "name": "1",
-          "bitmapResolution": 1,
-          "md5ext": "379873b9274949b5835e19c53431799f.svg",
-          "dataFormat": "svg",
-          "rotationCenterX": 240,
-          "rotationCenterY": 180.00000000000006
+          "bitmapResolution": 2,
+          "md5ext": "d36f6603ec293d2c2198d3ea05109fe0.png",
+          "dataFormat": "png",
+          "rotationCenterX": 480,
+          "rotationCenterY": 358
         },
         {
           "assetId": "14e46ec3e2ba471c2adfe8f119052307",

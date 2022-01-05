@@ -12,14 +12,12 @@
       border-radius: 10px;
       margin: 35px;
       border: 2px solid white;
+      background-image: url('assets/back.png');
     }
     [hidden] {
       display: none !important;
     }
 
-    body {
-      background-image: url('assets/back.png');
-    }
     h1 {
       font-weight: normal;
     }
