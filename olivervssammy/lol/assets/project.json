@@ -3895,13 +3895,13 @@
       "currentCostume": 0,
       "costumes": [
         {
-          "assetId": "efca9468d7c5b7c592c9312287584e38",
+          "assetId": "ddb312e028a5d698e5d6550932a532e2",
           "name": "1",
           "bitmapResolution": 1,
-          "md5ext": "efca9468d7c5b7c592c9312287584e38.svg",
+          "md5ext": "ddb312e028a5d698e5d6550932a532e2.svg",
           "dataFormat": "svg",
-          "rotationCenterX": 7.203240047799994,
-          "rotationCenterY": 11.016102029846053
+          "rotationCenterX": 5.5,
+          "rotationCenterY": 10
         }
       ],
       "sounds": [
@@ -9742,10 +9742,10 @@
       "currentCostume": 0,
       "costumes": [
         {
-          "assetId": "og",
+          "assetId": "8eb6c96a591eb0e7302879d4ae00fe9b",
           "name": "1",
           "bitmapResolution": 1,
-          "md5ext": "og.svg",
+          "md5ext": "8eb6c96a591eb0e7302879d4ae00fe9b.svg",
           "dataFormat": "svg",
           "rotationCenterX": 7,
           "rotationCenterY": 10.834384999999997
