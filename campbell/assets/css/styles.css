@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+
+
+:root {
+	--main-dark: #ce885a;
+	--main-darker: #63381c;
+	--main-med: #7c4421;
+	--main-text: #1e0404;
+	--main-light: #ab7c57;
+}
+
+html {
+
+
+}
+body {
+  background-image: url('../bg.jpg');
+background-repeat:;
+background-size: 250%;
+color: var(--main-text);
+font-family: 'Architects Daughter', cursive;
+
+}
+
+body {
+  font-size: 1rem;
+  margin: 25px;
+}
+a {
+  color: inherit;
+
+}
+
+.choose {
+  font-size: 18px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+.container {
+  width: 95vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+ text-align: center;
+}
+
+.main h1 {
+  font-size: 100px;
+}
+.main {
+  font-size: 24px;
+}
+
+.card {
+  transition: 0.25s;
+  width: 335px;
+    text-align: center;
+  border: 5px solid white;
+  margin: 10px;
+  border-radius: 30px;
+  background-color: rgba(236, 116, 35, 0.37);
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.card img {
+  height: auto;
+  margin: 5px;
+  max-width: 25%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.733);
+  border-radius: 20px;
+}
+
+.cards {
+    margin: 47px !important;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+  	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.card p {
+  text-align: center;
+}
+
+highlight {
+  background-color: white;
+  border-radius: 5px;
+  height: 10px;
+  font-size: 15px;
+  padding: 2px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+
+
+.big {
+  font-size: 42vw !important;
+}
