@@ -16,8 +16,7 @@ html {
 }
 body {
   background-image: url('../bg.jpg');
-background-repeat:;
-background-size: 250%;
+background-size: 115%;
 color: var(--main-text);
 font-family: 'Architects Daughter', cursive;
 
@@ -113,5 +112,6 @@ highlight {
 
 
 .big {
-  font-size: 42vw !important;
-}
+    margin-top: 80px;
+    font-size: 30vw !important;
+    }
